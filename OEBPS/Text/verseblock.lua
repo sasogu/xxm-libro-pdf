@@ -1,14 +1,4 @@
-function Div(el)
-    if el.classes:includes('verse2') then
-      if FORMAT:match('latex') then
-        return {
-          pandoc.RawBlock('latex', '\\begin{center}'),
-          el,
-          pandoc.RawBlock('latex', '\\end{center}')
-        }
-      end
-    end
-  end
+
 
   function Div(el)
     if el.classes:includes('verse') then
