@@ -1,0 +1,14 @@
+pandoc Section*.xhtml \
+  --from html \
+  --to pdf \
+  --pdf-engine=xelatex \
+  -H header.tex \
+  --lua-filter=verseblock.lua \
+  --toc \
+  --toc-depth=2 \
+  -V lang=es \
+  -V geometry=inner=3cm,outer=2cm,top=2.3cm,bottom=2.3cm,bindingoffset=1cm \
+  -V papersize=a5paper \
+  -o libro_completo.pdf
+
+  pandoc Section*.xhtml   --from html   --to pdf   --pdf-engine=xelatex   -H header.tex   --lua-filter=verseblock.lua   -V lang=es   -V geometry=inner=3cm,outer=2cm,top=1.8cm,bottom=2cm,bindingoffset=1cm   -V papersize=a5paper   -o libro_completo.pdf
